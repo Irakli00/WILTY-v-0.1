@@ -8,40 +8,40 @@ let turn = 0;
 /* demo sign dissapears */
 
 const putInLandscape = function(){ //ოპაციტყ ის გოოდ ბუტ მაკე ბტნს უნინტერაცტაბლე ტოო (იფ ჰეიგჰტ 0 იზნტ ენაუგჰ)
+  if(page.querySelector('.rotate-phone-bro') && !window.matchMedia("(orientation: landscape)").matches){
+    return
+  }
+
   if (!window.matchMedia("(orientation: landscape)").matches) {
-    console.log('before',[...page.children]);
+    // console.log('before',[...page.children]);
 
     [...page.children].forEach(el=>{
       el.style.opacity = 0
       el.style.height = 0
     })
 
-  //!page.querySelector('.rotate-phone-bro') && page.insertAdjacentHTML('beforeend',htmls.notLandscape)
   
   page.insertAdjacentHTML('beforeend',htmls.notLandscape)
 
-  console.log('after',[...page.children]);
+  // console.log('after',[...page.children]);
 
   }else{
-    if(page.querySelector('.rotate-phone-bro')){
-
       page.querySelector('.rotate-phone-bro').style.display = 'none';
 
       page.removeChild(page.querySelector('.rotate-phone-bro'));
 
       //page.innerHTML= htmls.startingPage;
 
-      console.log('else before',[...page.children]);
+      // console.log('else before',[...page.children]);
 
       [...page.children].forEach(el=>{
         el.style.opacity = 1
         el.style.height = ''
       })
 
-      console.log('else after',[...page.children]);
-    }
-  }
-}
+      // console.log('else after',[...page.children]);
+    }}
+
 
 const startGame = function () {
   if (!window.matchMedia("(orientation: landscape)").matches) {
