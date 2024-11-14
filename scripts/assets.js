@@ -198,7 +198,7 @@ startingPage:`
   lobbyGuessPlayer:`
         <div class="player--guess player--guess--0">
           <p>player X</p>
-          <div>
+          <div class="test">
             <button class="player--guess--T">TRUE</button>
             <button class="player--guess--L">LIE</button>
           </div>

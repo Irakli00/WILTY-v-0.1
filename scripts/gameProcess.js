@@ -2,9 +2,16 @@ import { players, page, htmls, fakeStories, gameMinutes } from "./assets.js";
 
 let turn = 0;
 
-const spreadColor = function(e){
+const spreadColor = function(e,steps=2){
     const bgc = window.getComputedStyle(e.target).backgroundColor
-    e.target.parentElement.style.backgroundColor = bgc
+    // e.target.parentElement.style.backgroundColor = bgc
+    e.target.parentElement.parentElement.style.backgroundColor = bgc
+    let parents =[
+      e.target.parentElement.style.backgroundColor,
+      e.target.parentElement.parentElement.style.backgroundColor,
+      e.target.parentElement.parentElement.parentElement.style.backgroundColor,
+    ]
+    parents[steps-1] = bgc
 }
 
 const startCountdown = function (e, minutes) {
@@ -130,7 +137,8 @@ const true_lieGuesses = function(e){
         el.addEventListener('click',(e)=>{
           playerGuessed++
           spreadColor(e)
-          e.target.parentElement.querySelector('.player--guess--L').style.display = 'none'
+          // e.target.parentElement.querySelector('.player--guess--L').style.display = 'none'
+          // e.target.parentElement.querySelector('.player--guess--L').style.height = 0
 
           if(playerGuessed== playersToGuess.length){
             reveal(e)
@@ -142,7 +150,8 @@ const true_lieGuesses = function(e){
       el.addEventListener('click',(e)=>{
         playerGuessed++
         spreadColor(e)
-        e.target.parentElement.querySelector('.player--guess--T').style.display = 'none'
+        // e.target.parentElement.querySelector('.player--guess--T').style.display = 'none'
+        e.target.parentElement.querySelector('.player--guess--T').style.backgroundColor = 'transparent'
         if(playerGuessed== playersToGuess.length){
           reveal(e)
         }

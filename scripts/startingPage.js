@@ -12,14 +12,14 @@ export const startBtnEvent = function (e) {
 
     const elem = document.documentElement; // Selects the whole document (the HTML element)
   
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.mozRequestFullScreen) { // Firefox
-      elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
-      elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { // IE/Edge
-      elem.msRequestFullscreen();}
+    // if (elem.requestFullscreen) {
+    //   elem.requestFullscreen();
+    // } else if (elem.mozRequestFullScreen) { // Firefox
+    //   elem.mozRequestFullScreen();
+    // } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+    //   elem.webkitRequestFullscreen();
+    // } else if (elem.msRequestFullscreen) { // IE/Edge
+    //   elem.msRequestFullscreen();}
 
     page.innerHTML = htmls.lobby;
 

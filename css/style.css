@@ -490,17 +490,22 @@ html {
   border: none;
   border-radius: 2px;
   font-weight: 600;
+}
 
+.test{
+  transition: all 2s ease;
 }
 
 .player--guess--T{
   background-color: var(--greenish);
   color: var(--dark-blue);
+  transition: all 2s ease;
 }
 
 .player--guess--L{
   background-color: var(--dark-red);
   color: var(--white-tint);
+  transition: all 2s ease;
 }
 
 .start-over {
