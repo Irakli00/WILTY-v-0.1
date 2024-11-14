@@ -1,5 +1,9 @@
 import { players, page, htmls, fakeStories, gameMinutes } from "./assets.js";
 
+//TODO: figure tru-lie guesses designs
+//      bugs on card animation-canceling (remove clickability)
+//      whole true-lie flow
+
 let turn = 0;
 
 const spreadColor = function(e,steps=2){
