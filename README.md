@@ -1,5 +1,4 @@
-(in progress)
-
-as for now, is only meant for phones in landscape mode
+(SCRAPPED) 
+I'm keeping it to be demonstration, where I was and where I am now :D
 
 https://fantastic-salamander-2cf90a.netlify.app/
